@@ -1,31 +1,90 @@
 body {
-    font-family: sans-serif;
-    background-color: #e9ecef;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .login-container {
-    width: 300px;
-    margin: 100px auto;
+    width: 100%;
+    max-width: 400px;
     background: #ffffff;
-    padding: 20px;
-    border: 1px solid #ccc;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+h2 {
+    margin-top: 0;
+    color: #333;
+    text-align: center;
+}
+
+.ayuda {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #444;
 }
 
 input {
-    width: 90%;
-    padding: 8px;
-    margin-bottom: 5px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Estilo visible para el foco pedido en el laboratorio */
+input:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0,86,179,0.3);
 }
 
 button {
-    padding: 10px 15px;
+    width: 100%;
+    padding: 12px;
     background-color: #0056b3;
     color: white;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #004494;
 }
 
 .mensaje {
     margin-top: 15px;
     font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Adaptación a vista móvil pedida en el laboratorio */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px;
+        box-shadow: none;
+        background-color: transparent;
+    }
+    body {
+        background-color: #ffffff;
+    }
 }
